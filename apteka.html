@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Информация об аптеке</title>
+</head>
+<body>
+    <h1>{{ apteka.name }}</h1>
+    <p><strong>Адрес:</strong> {{ apteka.address }}</p>
+    <p><strong>Телефон:</strong> {{ apteka.phone }}</p>
+    <h2>Доступные лекарства:</h2>
+    <ul>
+        {% for med in medication %}
+            <li>{{ med.name }} (Производитель: {{ med.manufacturer }}, Цена: {{ med.price }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

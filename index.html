@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список аптек</title>
+</head>
+<body>
+    <h1>Список аптек</h1>
+    <ul>
+        {% for apteka in apteki %}
+            <li><a href="/apteka/{{ apteka.id }}">{{ apteka.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
